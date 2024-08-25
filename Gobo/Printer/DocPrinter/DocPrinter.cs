@@ -237,10 +237,10 @@ internal class DocPrinter
         string value = stringDoc.Value;
 
         // Check if we should omit semicolons
-        if (value.EndsWith(";"))
-        {
-            value = value.TrimEnd(';');
-        }
+        // if (value.EndsWith(";"))
+        // {
+        //     value = value.TrimEnd(';');
+        // }
 
         Output.Append(value);
         CurrentWidth += value.GetPrintedWidth();

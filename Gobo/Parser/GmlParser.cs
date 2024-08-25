@@ -42,6 +42,7 @@ internal class GmlParser
 
     private List<Token> currentTriviaGroup = new();
     private bool HitEOF => token.Kind == TokenKind.Eof;
+    public bool IncludeStackTraceInErrors { get; set; } = true;
 
     private static readonly TokenKind[] assignmentOperators =
     {
@@ -178,10 +179,16 @@ internal class GmlParser
             }
         }
     }
-
     private void ThrowParseError(string message)
     {
         var finalMessage = $"Syntax error at line {token.Line}, column {token.Column}:\n{message}";
+
+        if (IncludeStackTraceInErrors)
+        {
+            var stackTrace = Environment.StackTrace;
+            finalMessage += $"\n\nStack trace:\n{stackTrace}";
+        }
+
         throw new GmlSyntaxErrorException(finalMessage);
     }
 
@@ -446,8 +453,17 @@ internal class GmlParser
             {
                 if (Accept(TokenKind.Comma))
                 {
-                    Expect(VariableDeclarator(out var variableDeclarator));
-                    declarations.Add(variableDeclarator);
+                    // Check if there's another variable declarator after the comma
+                    if (VariableDeclarator(out var variableDeclarator))
+                    {
+                        declarations.Add(variableDeclarator);
+                    }
+                    else
+                    {
+                        // If there's no variable declarator after the comma, it's a trailing comma
+                        // We can break the loop here
+                        break;
+                    }
                 }
                 else
                 {

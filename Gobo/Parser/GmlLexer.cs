@@ -111,6 +111,12 @@ internal class GmlLexer
                             Advance();
                         }
 
+                        if (HitEof)
+                        {
+                            // Allow multiline comments to hit EOF
+                            return Token(TokenKind.MultiLineComment);
+                        }
+
                         if (!Match('*'))
                         {
                             return UnexpectedToken();

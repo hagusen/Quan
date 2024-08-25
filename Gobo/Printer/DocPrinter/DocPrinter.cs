@@ -234,8 +234,16 @@ internal class DocPrinter
             return;
         }
 
-        Output.Append(stringDoc.Value);
-        CurrentWidth += stringDoc.Value.GetPrintedWidth();
+        string value = stringDoc.Value;
+
+        // Check if we should omit semicolons
+        if (value.EndsWith(";"))
+        {
+            value = value.TrimEnd(';');
+        }
+
+        Output.Append(value);
+        CurrentWidth += value.GetPrintedWidth();
     }
 
     private void ProcessLine(LineDoc line, PrintMode mode, Indent indent)

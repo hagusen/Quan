@@ -12,10 +12,10 @@ public class FormatOptions
 {
     public bool UseTabs { get; set; } = true;
     public int TabWidth { get; set; } = 4;
-    public int Width { get; set; } = 90;
+    public int Width { get; set; } = 900;
 
     [JsonIgnore]
-    public BraceStyle BraceStyle { get; set; } = BraceStyle.SameLine;
+    public BraceStyle BraceStyle { get; set; } = BraceStyle.NewLine;
 
     [JsonIgnore]
     public bool ValidateOutput { get; set; } = true;
@@ -24,7 +24,7 @@ public class FormatOptions
     public bool RemoveSyntaxExtensions { get; set; } = false;
 
     [JsonIgnore]
-    public bool GetDebugInfo { get; set; } = false;
+    public bool GetDebugInfo { get; set; } = true; // changed
 
     public static FormatOptions DefaultTestOptions { get; } = new() { GetDebugInfo = true };
 

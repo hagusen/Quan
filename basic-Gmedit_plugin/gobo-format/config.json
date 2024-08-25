@@ -1,0 +1,6 @@
+{
+  "name": "gobo-format",
+  "description": "Adds keybind to call gobo on selected file",
+  "scripts": ["format.js"],
+  "stylesheets": []
+}

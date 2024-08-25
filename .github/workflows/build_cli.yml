@@ -16,34 +16,34 @@ jobs:
         os: [ubuntu-20.04, windows-latest, macos-latest]
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 8.x
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 8.x
 
-    - name: Publish artifacts
-      run: dotnet publish Gobo.Cli/Gobo.Cli.csproj -c Release -o ./publish
+      - name: Publish artifacts
+        run: dotnet publish Gobo.Cli/Gobo.Cli.csproj -c Release -o ./publish
 
-    - name: Upload artifacts
-      if: matrix.os == 'ubuntu-20.04'
-      uses: actions/upload-artifact@v2
-      with:
-        name: gobo-ubuntu
-        path: ./publish
+      - name: Upload artifacts
+        if: matrix.os == 'ubuntu-20.04'
+        uses: actions/upload-artifact@v2
+        with:
+          name: gobo-ubuntu
+          path: ./publish
 
-    - name: Upload artifacts
-      if: matrix.os == 'windows-latest'
-      uses: actions/upload-artifact@v2
-      with:
-        name: gobo-windows
-        path: ./publish
+      - name: Upload artifacts
+        if: matrix.os == 'windows-latest'
+        uses: actions/upload-artifact@v2
+        with:
+          name: gobo-windows
+          path: ./publish
 
-    - name: Upload artifacts
-      if: matrix.os == 'macos-latest'
-      uses: actions/upload-artifact@v2
-      with:
-        name: gobo-macos
-        path: ./publish
+      - name: Upload artifacts
+        if: matrix.os == 'macos-latest'
+        uses: actions/upload-artifact@v2
+        with:
+          name: gobo-macos
+          path: ./publish

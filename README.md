@@ -1,12 +1,8 @@
 ## Gobo: GML Formatter
 
-[Try the formatter here!](https://pizzaandy.github.io/Gobo/)
+[Try the formatter here!](https://hagusen.github.io/Gobo/)
 
-Gobo is an opinionated formatter for GameMaker Language. It enforces a consistent style by parsing and re-printing your code with its own rules, taking maximum line length into account.
-
-By using Gobo, you agree to cede control over the nitty-gritty details of formatting. In return, Gobo gives you speed, determinism, and smaller git diffs. End style debates with your team and save mental energy for what's important!
-
-Gobo provides a few basic formatting options and has no plans to add more. It follows the [Option Philosophy](https://prettier.io/docs/en/option-philosophy.html) of Prettier.
+Gobo is an opinionated formatter for GameMaker Language.
 
 ### Input
 
@@ -23,15 +19,17 @@ call()
 ### Output
 
 ```js
-x = a && b || c;
-a = 0xF;
-G = 1;
-var i = 0;
-do {
-    show_debug_message(i);
-    ++constructor;
+x = a && b || c
+a = 0xF
+G = 1
+var i = 0
+do
+{
+    show_debug_message(i)
+    ++constructor
 } until (!constructor < 10)
-return call();
+return call()
+
 ```
 
 ## How does it work?
@@ -41,10 +39,3 @@ Gobo uses a custom GML parser to read your code and ensure that formatted code i
 
 Gobo converts your code into an intermediate "Doc" format to make decisions about wrapping lines and printing comments. The doc printing algorithm is taken from [CSharpier](https://github.com/belav/csharpier), which is itself adapted from Prettier.
 
-## Limitations
-Gobo cannot parse code that relies on macro expansion to be valid. Any standalone expression will be formatted with a semicolon, even if the expression is a macro.
-```js
-THESE_MACROS;
-ARE.VALID;
-BECAUSE_THEY_ARE_EXPRESSIONS()
-```

@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Gobo.Playground",
   "resources": {
-    "hash": "sha256-LTzBa7f87ljy44c4B7rSmAktWyV0jpQdlEA/uQaR8jA=",
+    "hash": "sha256-UOHI34xpnEm1aC5aAN4ymkwdK+d9QzzJN9NUWWj0jm8=",
     "jsModuleNative": {
       "dotnet.native.8.0.8.anr06xvywq.js": "sha256-x3vjSSLEL6fBpzzPnHuwIrNr/+W+XTbZXzr8f74FXoM="
     },
@@ -9,11 +9,11 @@
       "dotnet.runtime.8.0.8.mbdpnrzzmt.js": "sha256-0Dpj/NkVD5WqSC16ZvJLmlc38iv9+Je+umYBVOycPVU="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-Gi1D+lJP6rixl0T9RhB4Tm+PWwMzsAV4eDbDTxbMGl0="
+      "dotnet.native.wasm": "sha256-4QpM/tu7qw2E7lkOd66k8if16FIFp1frl6WY8KPV1h4="
     },
     "assembly": {
-      "Gobo.Playground.wasm": "sha256-GZO3sXUyoFyJFC1VZaoy5QOh30TspYCeSHmHL4pWwXA=",
-      "gobolib.wasm": "sha256-JcJVLi5GOwqnO0nis10yB1DEVCySQQN2uhyzcERoWUk=",
+      "Gobo.Playground.wasm": "sha256-tklzRJVgmQnUPxXyOGumwBT6wbJ5CyZa5c/m44LPdEE=",
+      "gobolib.wasm": "sha256-LbMyfqWbyqy8wY+sBe8XicxW+W615nZaeYdN+8jEGdA=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-qIqf1fBIn2juIKaRyuT99WnyvK8W5VHiptPtP9LhOcE=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-RNAqR0ff+baVaIhI+uEcLo9eT+pxGnBEvkCzqD+3roM=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-Ws5szf6fWPAXna+XyWsAhavx+WDFcA/91DQ7iPRPCMs=",
@@ -36,7 +36,7 @@
       "System.Memory.wasm": "sha256-6/G11vxTbcriqPUK7g+vWDhKlVduFde+WxaUB0NL0z4=",
       "System.Net.Http.wasm": "sha256-i+zTMbmdvjevXKGSt6mOk7PvPLLBKZTHM4l/jhVPUJw=",
       "System.Net.Primitives.wasm": "sha256-lhJICDICus6Y3eImdBY4QOxHHt0AKXAlLKgGG16oo34=",
-      "System.Private.CoreLib.wasm": "sha256-Gt0lq+WLU3cZrEnkWU4ej+IVSZ5l0EpPzhwhVIuJwvc=",
+      "System.Private.CoreLib.wasm": "sha256-Cu8/UwvB8WxAAbfJTbeKQWJ2WZjuxq5nUE1QzOXaT/o=",
       "System.Private.Uri.wasm": "sha256-ydUWVReYUC90khTnHuOvaUGt4kKHkbRNZABG16UxuD8=",
       "System.Runtime.InteropServices.JavaScript.wasm": "sha256-xhWZGeiLX+ZEAZsKAzqzbioC7S8HVyPdnAl93D8cEFM=",
       "System.Runtime.Serialization.Primitives.wasm": "sha256-9ke9ibH7TMZi232BC4q177rkuZTTZAn6kZyO69c6hRw=",

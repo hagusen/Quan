@@ -68,6 +68,7 @@ static async Task<int> Run(IDictionary<string, ArgValue> arguments)
     FormatOptions options = ConfigFileHandler.FindConfigOrDefault(filePath);
 
     const string GmlExtension = ".gml";
+    int totalLines = 0;
 
     if (File.Exists(filePath))
     {
@@ -80,6 +81,7 @@ static async Task<int> Run(IDictionary<string, ArgValue> arguments)
         Console.WriteLine(check ? "Checking" : "Formatting" + $" {Path.GetFileName(filePath)}...");
 
         var stopWatch = Stopwatch.StartNew();
+        totalLines += await CountLinesAsync(filePath);
         await processFile(filePath, options, arguments);
         stopWatch.Stop();
 
@@ -101,6 +103,11 @@ static async Task<int> Run(IDictionary<string, ArgValue> arguments)
         Console.WriteLine(check ? "Checking" : "Formatting" + " files...");
         var stopWatch = Stopwatch.StartNew();
 
+        foreach (var file in files)
+        {
+            totalLines += await CountLinesAsync(file.FullName);
+        }
+
         await Task.WhenAll(files.Select(file => processFile(file.FullName, options, arguments)));
 
         stopWatch.Stop();
@@ -111,7 +118,15 @@ static async Task<int> Run(IDictionary<string, ArgValue> arguments)
         );
     }
 
+    Console.WriteLine($"Total lines processed: {totalLines}");
+
     return 0;
+}
+
+static async Task<int> CountLinesAsync(string filePath)
+{
+    var lines = await File.ReadAllLinesAsync(filePath);
+    return lines.Length;
 }
 
 static async Task FormatFile(

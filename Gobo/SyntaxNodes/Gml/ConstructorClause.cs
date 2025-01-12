@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class ConstructorClause : GmlSyntaxNode
+public sealed class ConstructorClause : GmlSyntaxNode
 {
     public GmlSyntaxNode Id { get; set; }
     public GmlSyntaxNode Arguments { get; set; }

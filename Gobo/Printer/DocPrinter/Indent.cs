@@ -2,28 +2,28 @@ using System.Text;
 
 namespace Gobo.Printer.DocPrinter;
 
-internal class Indent
+public class Indent
 {
     public string Value = string.Empty;
     public int Length;
     public IList<IIndentType>? TypesForTabs;
 }
 
-internal interface IIndentType { }
+public interface IIndentType { }
 
-internal class IndentType : IIndentType
+public class IndentType : IIndentType
 {
     protected IndentType() { }
 
     public static IndentType Instance = new();
 }
 
-internal class AlignType : IIndentType
+public class AlignType : IIndentType
 {
     public int Width { get; init; }
 }
 
-internal class Indenter
+public class Indenter
 {
     protected readonly DocPrinterOptions PrinterOptions;
 

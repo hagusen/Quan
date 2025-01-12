@@ -1,6 +1,6 @@
 namespace Gobo.Printer.DocTypes;
 
-internal static class DocUtilities
+public static class DocUtilities
 {
     public static bool ContainsBreak(Doc doc)
     {

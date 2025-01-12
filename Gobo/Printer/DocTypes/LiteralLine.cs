@@ -1,6 +1,6 @@
 namespace Gobo.Printer.DocTypes;
 
-internal class LiteralLine : LineDoc, IBreakParent
+public class LiteralLine : LineDoc, IBreakParent
 {
     public LiteralLine()
     {

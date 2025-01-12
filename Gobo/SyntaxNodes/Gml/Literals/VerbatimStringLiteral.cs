@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml.Literals
 {
-    internal sealed class VerbatimStringLiteral : Literal
+    public sealed class VerbatimStringLiteral : Literal
     {
         public char QuoteCharacter { get; set; }
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Gobo.Printer.DocPrinter;
 
-internal class DocPrinter
+public class DocPrinter
 {
     public struct DocPrinterResult
     {
@@ -477,9 +477,9 @@ internal class DocPrinter
     }
 }
 
-internal record PrintCommand(Indent Indent, PrintMode Mode, Doc Doc);
+public record PrintCommand(Indent Indent, PrintMode Mode, Doc Doc);
 
-internal enum PrintMode
+public enum PrintMode
 {
     Flat,
     Break,

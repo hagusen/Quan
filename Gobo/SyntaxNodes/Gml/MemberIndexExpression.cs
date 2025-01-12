@@ -3,7 +3,7 @@ using Gobo.SyntaxNodes.PrintHelpers;
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class MemberIndexExpression : GmlSyntaxNode, IMemberChainable
+public sealed class MemberIndexExpression : GmlSyntaxNode, IMemberChainable
 {
     public GmlSyntaxNode Object { get; set; }
     public List<GmlSyntaxNode> Properties { get; set; }

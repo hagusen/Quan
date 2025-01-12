@@ -1,3 +1,3 @@
 namespace Gobo.Printer;
 
-internal class InTooDeepException : Exception { }
+public class InTooDeepException : Exception { }

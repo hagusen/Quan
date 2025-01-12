@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Gobo.Printer.Utilities;
 
-internal static class StringExtensions
+public static class StringExtensions
 {
     public static string CalculateHash(this string value)
     {

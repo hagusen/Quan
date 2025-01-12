@@ -3,7 +3,7 @@ using Gobo.SyntaxNodes.Gml;
 
 namespace Gobo.SyntaxNodes.PrintHelpers;
 
-internal class PrintedNode
+public class PrintedNode
 {
     public Doc Doc;
     public GmlSyntaxNode Node;
@@ -15,14 +15,14 @@ internal class PrintedNode
     }
 };
 
-internal interface IMemberChainable
+public interface IMemberChainable
 {
     public GmlSyntaxNode Object { get; set; }
     public Doc PrintInChain(PrintContext ctx);
     public void SetObject(GmlSyntaxNode node);
 }
 
-internal static class MemberChain
+public static class MemberChain
 {
     public static Doc PrintMemberChain(PrintContext ctx, GmlSyntaxNode node)
     {

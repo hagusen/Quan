@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class DeleteStatement : GmlSyntaxNode
+public sealed class DeleteStatement : GmlSyntaxNode
 {
     public GmlSyntaxNode Argument { get; set; }
 

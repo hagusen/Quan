@@ -3,9 +3,9 @@ using System.Runtime.CompilerServices;
 
 namespace Gobo.Parser;
 
-internal class GmlLexer
+public class GmlLexer
 {
-    internal enum LexerMode
+    public enum LexerMode
     {
         Default,
         TemplateString,

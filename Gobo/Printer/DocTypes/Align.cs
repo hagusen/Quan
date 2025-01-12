@@ -1,6 +1,6 @@
 namespace Gobo.Printer.DocTypes;
 
-internal class Align : Doc, IHasContents
+public class Align : Doc, IHasContents
 {
     public int Width { get; }
     public Doc Contents { get; }

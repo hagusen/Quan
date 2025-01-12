@@ -1,6 +1,6 @@
 ﻿namespace Gobo.Parser;
 
-internal readonly struct Token
+public readonly struct Token
 {
     public string Text { get; init; }
     public TokenKind Kind { get; init; }
@@ -30,7 +30,7 @@ internal readonly struct Token
     }
 }
 
-internal enum TokenKind
+public enum TokenKind
 {
     SingleLineComment,
     MultiLineComment,

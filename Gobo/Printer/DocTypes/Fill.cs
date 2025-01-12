@@ -1,6 +1,6 @@
 ﻿namespace Gobo.Printer.DocTypes;
 
-internal class Fill : Doc
+public class Fill : Doc
 {
     public IList<Doc> Contents { get; set; }
 

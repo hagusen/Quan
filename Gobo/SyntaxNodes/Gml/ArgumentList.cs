@@ -3,7 +3,7 @@ using Gobo.SyntaxNodes.PrintHelpers;
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class ArgumentList : GmlSyntaxNode
+public sealed class ArgumentList : GmlSyntaxNode
 {
     public List<GmlSyntaxNode> Arguments => Children;
     public static Doc EmptyArguments => "()";

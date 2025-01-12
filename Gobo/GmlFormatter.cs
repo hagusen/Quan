@@ -206,3 +206,28 @@ public static partial class GmlFormatter
         await File.WriteAllTextAsync(filePath, formatted);
     }
 }
+
+
+
+
+
+
+
+public static partial class GmlASTTest
+{
+    public static GmlParseResult Parse(string text)
+    {
+        return Parse(SourceText.From(text));
+    }
+
+    public static GmlParseResult Parse(SourceText code)
+    {
+        var parser = new GmlParser(code);
+        var parseResult = parser.Parse();
+
+        // Attach comments to AST nodes
+        new CommentMapper(code, parseResult.TriviaGroups).AttachComments(parseResult.Ast);
+
+        return parseResult;
+    }
+}

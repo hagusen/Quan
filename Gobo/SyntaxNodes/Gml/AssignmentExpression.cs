@@ -3,7 +3,7 @@ using Gobo.SyntaxNodes.PrintHelpers;
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class AssignmentExpression : GmlSyntaxNode
+public sealed class AssignmentExpression : GmlSyntaxNode
 {
     public string Operator { get; set; }
     public GmlSyntaxNode Left { get; set; }

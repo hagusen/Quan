@@ -4,7 +4,7 @@ using System.Text.Json.Serialization;
 
 namespace Gobo.SyntaxNodes;
 
-internal abstract partial class GmlSyntaxNode : ISyntaxNode<GmlSyntaxNode>
+public abstract partial class GmlSyntaxNode : ISyntaxNode<GmlSyntaxNode>
 {
     public string Kind => GetType().Name;
 

@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class BreakStatement : GmlSyntaxNode
+public sealed class BreakStatement : GmlSyntaxNode
 {
     public BreakStatement(TextSpan span)
         : base(span) { }

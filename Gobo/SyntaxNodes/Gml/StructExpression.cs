@@ -3,7 +3,7 @@ using Gobo.SyntaxNodes.PrintHelpers;
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class StructExpression : GmlSyntaxNode
+public sealed class StructExpression : GmlSyntaxNode
 {
     public List<GmlSyntaxNode> Properties => Children;
     public static string EmptyStruct => "{}";

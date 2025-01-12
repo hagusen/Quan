@@ -6,7 +6,7 @@ namespace Gobo.Printer;
 /// <summary>
 /// Used to create a string representation of a Doc
 /// </summary>
-internal static class DocSerializer
+public static class DocSerializer
 {
     private const int IndentSize = 2;
 

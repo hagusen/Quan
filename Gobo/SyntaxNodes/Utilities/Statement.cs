@@ -3,7 +3,7 @@ using Gobo.SyntaxNodes.Gml;
 
 namespace Gobo.SyntaxNodes.PrintHelpers;
 
-internal static class Statement
+public static class Statement
 {
     public static Doc PrintControlFlowStatement(
         PrintContext ctx,

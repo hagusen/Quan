@@ -12,7 +12,7 @@ namespace Gobo.SyntaxNodes;
     MaxDepth = 256
 )]
 [JsonSerializable(typeof(GmlSyntaxNode))]
-internal partial class SyntaxNodeSerializerContext : JsonSerializerContext { }
+public partial class SyntaxNodeSerializerContext : JsonSerializerContext { }
 
 // Currently, the only way to use source-generated System.Text.Json serializers
 // with polymorphism is to explicitly declare each subtype. This is fine...
@@ -77,4 +77,4 @@ internal partial class SyntaxNodeSerializerContext : JsonSerializerContext { }
 [JsonDerivedType(typeof(VerbatimStringLiteral))]
 // Syntax extensions
 [JsonDerivedType(typeof(TypeAnnotation))]
-internal abstract partial class GmlSyntaxNode { }
+public abstract partial class GmlSyntaxNode { }

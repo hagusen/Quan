@@ -2,7 +2,7 @@ using Gobo.Printer.DocTypes;
 
 namespace Gobo.Printer.DocPrinter;
 
-internal static class PropagateBreaks
+public static class PropagateBreaks
 {
     private class MarkerDoc : Doc { }
 

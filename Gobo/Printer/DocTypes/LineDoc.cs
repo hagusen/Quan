@@ -1,6 +1,6 @@
 namespace Gobo.Printer.DocTypes;
 
-internal class LineDoc : Doc
+public class LineDoc : Doc
 {
     public enum LineType
     {

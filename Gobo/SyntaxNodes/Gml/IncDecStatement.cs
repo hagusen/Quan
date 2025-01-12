@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class IncDecStatement : GmlSyntaxNode
+public sealed class IncDecStatement : GmlSyntaxNode
 {
     public string Operator { get; set; }
     public GmlSyntaxNode Argument { get; set; }

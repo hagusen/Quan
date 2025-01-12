@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.PrintHelpers;
 
-internal class DelimitedList
+public class DelimitedList
 {
     public static Doc PrintInBrackets(
         PrintContext ctx,

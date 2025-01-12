@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class TemplateText : GmlSyntaxNode
+public sealed class TemplateText : GmlSyntaxNode
 {
     public string Text { get; set; }
 

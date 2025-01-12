@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class UnaryExpression : GmlSyntaxNode
+public sealed class UnaryExpression : GmlSyntaxNode
 {
     public string Operator { get; set; }
     public GmlSyntaxNode Argument { get; set; }

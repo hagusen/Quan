@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Gobo.Printer.DocPrinter;
 
-internal static class DocFitter
+public static class DocFitter
 {
     public static bool Fits(
         PrintCommand nextCommand,

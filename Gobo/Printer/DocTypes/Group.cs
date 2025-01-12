@@ -1,6 +1,6 @@
 namespace Gobo.Printer.DocTypes;
 
-internal class Group : Doc, IHasContents
+public class Group : Doc, IHasContents
 {
     public Doc Contents { get; set; } = Null;
     public bool Break { get; set; }

@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml.Literals;
 
-internal partial class Literal : GmlSyntaxNode
+public partial class Literal : GmlSyntaxNode
 {
     public string Text { get; set; }
 

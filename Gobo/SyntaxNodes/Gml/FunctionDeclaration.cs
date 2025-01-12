@@ -3,7 +3,7 @@ using Gobo.SyntaxNodes.PrintHelpers;
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class FunctionDeclaration : GmlSyntaxNode
+public sealed class FunctionDeclaration : GmlSyntaxNode
 {
     public GmlSyntaxNode Id { get; set; }
     public GmlSyntaxNode Parameters { get; set; }

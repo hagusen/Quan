@@ -4,21 +4,21 @@ using System.Text.Json.Serialization;
 
 namespace Gobo.SyntaxNodes;
 
-internal enum CommentType
+public enum CommentType
 {
     Leading,
     Trailing,
     Dangling,
 }
 
-internal enum CommentPlacement
+public enum CommentPlacement
 {
     OwnLine,
     EndOfLine,
     Remaining,
 }
 
-internal enum FormatCommandType
+public enum FormatCommandType
 {
     None,
     Ignore,
@@ -27,7 +27,7 @@ internal enum FormatCommandType
 /// <summary>
 /// Represents a sequence of comments with no line breaks between them.
 /// </summary>
-internal class CommentGroup
+public class CommentGroup
 {
     public string Text => string.Concat(CommentTokens.Select(t => t.Text));
 

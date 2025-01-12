@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class NewExpression : GmlSyntaxNode
+public sealed class NewExpression : GmlSyntaxNode
 {
     public GmlSyntaxNode Argument { get; set; }
 

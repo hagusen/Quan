@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class TemplateLiteral : GmlSyntaxNode
+public sealed class TemplateLiteral : GmlSyntaxNode
 {
     public List<GmlSyntaxNode> Parts => Children;
 

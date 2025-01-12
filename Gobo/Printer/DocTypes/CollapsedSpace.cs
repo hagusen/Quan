@@ -1,3 +1,3 @@
 namespace Gobo.Printer.DocTypes;
 
-internal class CollapsedSpace : Doc { }
+public class CollapsedSpace : Doc { }

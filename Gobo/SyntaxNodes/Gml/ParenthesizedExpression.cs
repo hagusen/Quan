@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class ParenthesizedExpression : GmlSyntaxNode
+public sealed class ParenthesizedExpression : GmlSyntaxNode
 {
     public GmlSyntaxNode Expression { get; set; }
 

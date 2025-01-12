@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class ContinueStatement : GmlSyntaxNode
+public sealed class ContinueStatement : GmlSyntaxNode
 {
     public ContinueStatement(TextSpan span)
         : base(span) { }

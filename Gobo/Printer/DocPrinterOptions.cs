@@ -1,6 +1,6 @@
 namespace Gobo.Printer;
 
-internal class DocPrinterOptions
+public class DocPrinterOptions
 {
     public bool UseTabs { get; init; }
     public int TabWidth { get; init; } = 4;

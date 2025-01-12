@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class RegionStatement : GmlSyntaxNode
+public sealed class RegionStatement : GmlSyntaxNode
 {
     public string? Name { get; set; }
     public bool IsEndRegion { get; set; }

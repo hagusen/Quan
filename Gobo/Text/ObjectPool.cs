@@ -37,20 +37,20 @@ namespace Gobo.Text;
 /// Rationale:
 ///    If there is no intent for reusing the object, do not use pool - just use "new".
 /// </summary>
-internal class ObjectPool<T>
+public class ObjectPool<T>
     where T : class
 {
     [DebuggerDisplay("{Value,nq}")]
     private struct Element
     {
-        internal T? Value;
+        public T? Value;
     }
 
     /// <remarks>
     /// Not using System.Func{T} because this file is linked into the (debugger) Formatter,
     /// which does not have that type (since it compiles against .NET 2.0).
     /// </remarks>
-    internal delegate T Factory();
+    public delegate T Factory();
 
     // Storage for the pool objects. The first item is stored in a dedicated field because we
     // expect to be able to satisfy most requests from it.
@@ -73,7 +73,7 @@ internal class ObjectPool<T>
         private volatile bool disposed;
 
 #if TRACE_LEAKS
-            internal volatile object Trace = null;
+            public volatile object Trace = null;
 #endif
 
         public void Dispose()
@@ -108,10 +108,10 @@ internal class ObjectPool<T>
     }
 #endif
 
-    internal ObjectPool(Factory factory, bool trimOnFree = true)
+    public ObjectPool(Factory factory, bool trimOnFree = true)
         : this(factory, Environment.ProcessorCount * 2, trimOnFree) { }
 
-    internal ObjectPool(Factory factory, int size, bool trimOnFree = true)
+    public ObjectPool(Factory factory, int size, bool trimOnFree = true)
     {
         Debug.Assert(size >= 1);
         _factory = factory;
@@ -119,7 +119,7 @@ internal class ObjectPool<T>
         TrimOnFree = trimOnFree;
     }
 
-    internal ObjectPool(Func<ObjectPool<T>, T> factory, int size)
+    public ObjectPool(Func<ObjectPool<T>, T> factory, int size)
     {
         Debug.Assert(size >= 1);
         _factory = () => factory(this);
@@ -140,7 +140,7 @@ internal class ObjectPool<T>
     /// Note that Free will try to store recycled objects close to the start thus statistically
     /// reducing how far we will typically search.
     /// </remarks>
-    internal T Allocate()
+    public T Allocate()
     {
         // PERF: Examine the first element. If that fails, AllocateSlow will look at the remaining elements.
         // Note that the initial read is optimistically not synchronized. That is intentional.
@@ -194,7 +194,7 @@ internal class ObjectPool<T>
     /// Note that Free will try to store recycled objects close to the start thus statistically
     /// reducing how far we will typically search in Allocate.
     /// </remarks>
-    internal void Free(T obj)
+    public void Free(T obj)
     {
         Validate(obj);
         ForgetTrackedObject(obj);
@@ -237,7 +237,7 @@ internal class ObjectPool<T>
     /// return a larger array to the pool than was originally allocated.
     /// </summary>
     [Conditional("DEBUG")]
-    internal void ForgetTrackedObject(T old, T? replacement = null)
+    public void ForgetTrackedObject(T old, T? replacement = null)
     {
 #if DETECT_LEAKS
         LeakTracker tracker;

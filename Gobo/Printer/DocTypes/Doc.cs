@@ -1,6 +1,6 @@
 namespace Gobo.Printer.DocTypes;
 
-internal abstract class Doc
+public abstract class Doc
 {
     public override string ToString()
     {
@@ -175,7 +175,7 @@ internal abstract class Doc
         new(Concat(contents), id);
 }
 
-internal enum CommentFormat
+public enum CommentFormat
 {
     SingleLine,
     MultiLine

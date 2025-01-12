@@ -3,7 +3,7 @@ using Gobo.SyntaxNodes.PrintHelpers;
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class WhileStatement : GmlSyntaxNode
+public sealed class WhileStatement : GmlSyntaxNode
 {
     public GmlSyntaxNode Test { get; set; }
     public GmlSyntaxNode Body { get; set; }

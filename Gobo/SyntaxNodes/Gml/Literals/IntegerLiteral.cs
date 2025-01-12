@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml.Literals
 {
-    internal sealed class IntegerLiteral : Literal
+    public sealed class IntegerLiteral : Literal
     {
         public IntegerLiteral(TextSpan span, string text)
             : base(span, text) { }

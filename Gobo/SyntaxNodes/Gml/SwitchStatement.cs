@@ -3,7 +3,7 @@ using Gobo.SyntaxNodes.PrintHelpers;
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class SwitchStatement : GmlSyntaxNode
+public sealed class SwitchStatement : GmlSyntaxNode
 {
     public GmlSyntaxNode Discriminant { get; set; }
     public GmlSyntaxNode Cases { get; set; }

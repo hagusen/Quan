@@ -4,7 +4,7 @@ using Gobo.SyntaxNodes.Gml.Literals;
 
 namespace Gobo.SyntaxNodes.PrintHelpers;
 
-internal class RightHandSide
+public class RightHandSide
 {
     private enum Layout
     {

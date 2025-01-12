@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class ConditionalExpression : GmlSyntaxNode
+public sealed class ConditionalExpression : GmlSyntaxNode
 {
     public GmlSyntaxNode Test { get; set; }
     public GmlSyntaxNode WhenTrue { get; set; }

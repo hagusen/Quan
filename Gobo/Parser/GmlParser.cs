@@ -5,19 +5,19 @@ using Gobo.Text;
 
 namespace Gobo.Parser;
 
-internal class GmlParseResult
+public class GmlParseResult
 {
     public GmlSyntaxNode Ast;
     public List<Token[]> TriviaGroups;
 }
 
-internal class GmlSyntaxErrorException : Exception
+public class GmlSyntaxErrorException : Exception
 {
     public GmlSyntaxErrorException(string message)
         : base(message) { }
 }
 
-internal readonly struct GmlSyntaxError
+public readonly struct GmlSyntaxError
 {
     public string Message { get; init; }
 
@@ -27,7 +27,7 @@ internal readonly struct GmlSyntaxError
     }
 }
 
-internal class GmlParser
+public class GmlParser
 {
     public Token CurrentToken => token;
 

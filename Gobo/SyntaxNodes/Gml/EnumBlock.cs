@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class EnumBlock : GmlSyntaxNode
+public sealed class EnumBlock : GmlSyntaxNode
 {
     public List<GmlSyntaxNode> Members => Children;
 

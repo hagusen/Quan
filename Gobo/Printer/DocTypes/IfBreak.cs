@@ -1,13 +1,13 @@
 namespace Gobo.Printer.DocTypes;
 
-internal class IfBreak : Doc
+public class IfBreak : Doc
 {
     public Doc FlatContents { get; set; } = Null;
     public Doc BreakContents { get; set; } = Null;
     public string? GroupId { get; set; }
 }
 
-internal class IndentIfBreak : IfBreak
+public class IndentIfBreak : IfBreak
 {
     public IndentIfBreak(Doc contents, string groupId)
     {

@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class DefineStatement : GmlSyntaxNode
+public sealed class DefineStatement : GmlSyntaxNode
 {
     public string Name { get; set; }
 

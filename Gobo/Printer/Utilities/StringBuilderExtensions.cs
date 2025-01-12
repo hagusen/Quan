@@ -3,7 +3,7 @@ using System.Text;
 
 namespace Gobo.Printer.Utilities;
 
-internal static class StringBuilderExtensions
+public static class StringBuilderExtensions
 {
     public static bool EndsWithNewLineAndWhitespace(this StringBuilder stringBuilder)
     {

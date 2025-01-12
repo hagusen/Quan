@@ -2,7 +2,7 @@
 
 namespace Gobo;
 
-internal class PrintContext
+public class PrintContext
 {
     public FormatOptions Options { get; init; }
     public SourceText SourceText { get; init; }

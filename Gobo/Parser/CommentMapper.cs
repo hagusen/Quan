@@ -3,7 +3,7 @@ using Gobo.Text;
 
 namespace Gobo.Parser;
 
-internal class CommentMapper
+public class CommentMapper
 {
     public SourceText SourceText { get; set; }
 
@@ -298,7 +298,7 @@ internal class CommentMapper
     }
 }
 
-internal class GmlNodeComparer : Comparer<GmlSyntaxNode>
+public class GmlNodeComparer : Comparer<GmlSyntaxNode>
 {
     public override int Compare(GmlSyntaxNode? nodeA, GmlSyntaxNode? nodeB)
     {

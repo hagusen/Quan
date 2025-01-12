@@ -1,6 +1,6 @@
 ﻿namespace Gobo.SyntaxNodes;
 
-internal interface ISyntaxNode<T>
+public interface ISyntaxNode<T>
     where T : ISyntaxNode<T>
 {
     public abstract TextSpan Span { get; set; }

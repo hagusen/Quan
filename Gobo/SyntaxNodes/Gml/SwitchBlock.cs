@@ -3,7 +3,7 @@ using Gobo.SyntaxNodes.PrintHelpers;
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class SwitchBlock : GmlSyntaxNode
+public sealed class SwitchBlock : GmlSyntaxNode
 {
     public List<GmlSyntaxNode> Cases => Children;
 

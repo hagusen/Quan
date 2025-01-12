@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml.Literals
 {
-    internal sealed class UndefinedLiteral : Literal
+    public sealed class UndefinedLiteral : Literal
     {
         public UndefinedLiteral(TextSpan span, string text)
             : base(span, text) { }

@@ -2,7 +2,7 @@
 
 namespace Gobo.SyntaxNodes.Gml;
 
-internal sealed class ThrowStatement : GmlSyntaxNode
+public sealed class ThrowStatement : GmlSyntaxNode
 {
     public GmlSyntaxNode Expression { get; set; }
 

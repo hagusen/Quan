@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "publish-move-run",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-Command",
+                "dotnet publish Gobo.Cli/Gobo.Cli.csproj -c Release -o ./publish; if ($?) { robocopy ./publish C:\\Users\\jabja\\Documents\\Valkyr\\kaifa /E /IS /MOVE; $null = $?; C:\\Users\\jabja\\Documents\\Valkyr\\kaifa\\Gobo.Cli.exe }"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}
